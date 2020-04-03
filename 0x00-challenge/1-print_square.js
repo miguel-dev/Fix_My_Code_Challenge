@@ -14,7 +14,7 @@ if (process.argv.length <= 2) {
     process.exit(1)
 }
 
-var size = parseInt(process.argv[2], 16)
+size = parseInt(process.argv[2], 16)
 
 for (var i = 0 ; i < size ; i ++) {
     for (var j = 0 ; j < (size*2) ; j ++) {

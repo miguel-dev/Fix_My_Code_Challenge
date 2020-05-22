@@ -9,12 +9,8 @@ class Square():
 
     def __init__(self, *args, **kwargs):
         "Initializes square class attributes"
-        if (kwargs):
-            if (len(set(kwargs.values())) == 1):
-                for key, value in kwargs.items():
-                    setattr(self, key, value)
-            else:
-                raise ValueError("Width and Height need to be equal")
+        for key, value in kwargs.items():
+            setattr(self, key, value)
 
     def area_of_my_square(self):
         """ Area of the square """

@@ -7,14 +7,14 @@ class Square():
     width = 0
     height = 0
 
-    def __init__(self, size=0):
+    def __init__(self, *args, **kwargs):
         "Initializes square class attributes"
-        square.width = size
-        square.height = size
+        for key, value in kwargs.items():
+            setattr(self, key, value)
 
     def area_of_my_square(self):
         """ Area of the square """
-        return self.width * self.height
+        return self.width * self.width
 
     def permiter_of_my_square(self):
         """Perimeter of the square"""
@@ -26,7 +26,7 @@ class Square():
 
 if __name__ == "__main__":
 
-    s = square(size=9)
+    s = Square(width=12, height=9)
     print(s)
     print(s.area_of_my_square())
-    print(s.PermiterOfMySquare())
+    print(s.permiter_of_my_square())
